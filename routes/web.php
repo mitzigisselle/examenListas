@@ -16,3 +16,10 @@ use App\Http\Controllers\LibreriaControl;
 
 Route::get('/', [LibreriaControl::class, 'index'])->name('libros.index');
 Route::get('mostrar/{libro}', [LibreriaControl::class, 'mostrar'])->name('libros.mostrar');
+
+Route::get('libros/{libro}/edit', [LibreriaControl::class, 'edit'])->name('libros.edit');
+
+Route::put('libros/{libro}', [LibreriaControl::class, 'update'])->name('libros.update');
+
+Route::delete('libros/{libro}', [LibreriaControl::class, 'destroy'])->name('libros.destroy');
+
